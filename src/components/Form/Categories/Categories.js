@@ -42,6 +42,7 @@ const CategoryItem = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     position: relative;
@@ -184,6 +185,7 @@ function CategoryList({ categoriesDataArr, onSelectionChange }) {
                   key={iconIndex}
                   onMouseEnter={() => setHoveredCategory(icon.name)}
                   onMouseLeave={() => setHoveredCategory(null)}
+                  onClick={() => handleCheckboxChange(categoryIndex, iconIndex)}
                 >
                   <CheckboxWrapper>
                     <CheckboxInput
@@ -203,6 +205,7 @@ function CategoryList({ categoriesDataArr, onSelectionChange }) {
                     style={{
                       width: "5.6rem",
                       height: "5.6rem",
+                      aspectRatio: "auto 3/4",
                     }}
                   />
                   <Tooltip show={hoveredCategory === icon.name}>

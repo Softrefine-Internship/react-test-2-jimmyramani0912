@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Styled from "styled-components";
 import Button from "./Button/Button";
-import Markdown from "react-markdown";
+import ReactDOMServer from "react-dom/server";
 
 const FlexButton = Styled.div`
   display: flex;
@@ -23,10 +23,28 @@ const BoxStyle = Styled.div`
 
 function Action({ Data, handleGenerateReadme }) {
   const [categories, setCategories] = useState();
+  const [githubValue, setGithubValue] = useState("");
   const savedCategories = localStorage.getItem("categoriesIconData");
+  const [copyButtonState, setCopyButtonState] = useState({
+    icon: "copy-outline",
+    title: "copy-markdown",
+  });
+  const [isButtonZoomed, setButtonZoomed] = useState(false);
+  let url = "";
   let filteredData = [];
+  const contentItems = [];
+  const contentItems2 = [];
 
   useEffect(() => {
+    const githubEntry = Data.social.find(
+      (entry) => entry.title === "https://github.com/"
+    );
+
+    if (githubEntry) {
+      setGithubValue(githubEntry.value);
+      url = "";
+    }
+
     if (savedCategories) {
       filteredData = JSON.parse(savedCategories)
         .map((category) => {
@@ -44,113 +62,132 @@ function Action({ Data, handleGenerateReadme }) {
     }
   }, []);
 
-  const renderIcons = (icons) => {
-    return icons.map((icon) => (
-      <div key={icon.name}>
-        <img
-          src={icon.iconImage}
-          style={{
-            marginRight: "2rem",
-            marginBottom: "1.6rem",
-            width: "3.6rem",
-            height: "3.6rem",
-          }}
-          alt={icon.name}
-          width="30"
-          height="30"
-        />
-      </div>
-    ));
-  };
+  for (let i = 3; i <= 9; i += 3) {
+    if (Data.input[i].value) {
+      const title = Data.input[i].value;
+      const linkTitle = Data.input[i + 1].value;
+      const linkURL = Data.input[i + 2].value;
 
-  const renderSocialLinks = (social) => {
-    return social.map((item) => (
-      <a key={item.title} href={item.title + item.value} target="_blank">
-        <img
-          src={item.logo}
-          style={{ marginRight: "1rem" }}
-          width="30"
-          height="30"
-        />
-      </a>
-    ));
-  };
-
-  const aboutMeMarkdown = Data.input
-    .slice(12, 26)
-    .map((_, index) => {
-      const titleIndex = 12 + index * 2;
-      const contentIndex = 13 + index * 2;
-      if (
-        Data.input[titleIndex] === undefined ||
-        Data.input[contentIndex] === undefined
-      ) {
-        return "";
-      }
-      const title = Data.input[titleIndex].value || "";
-      const content = Data.input[contentIndex].value || "";
-      return `${title || content ? `- ${title} ${content}` : ""}`;
-    })
-    .filter(Boolean)
-    .join("\n");
-
-  const markdown = `
-  # ${(Data.input[0].value || "") + " " + (Data.input[1].value || "")}
-  ## ${Data.input[2].value || ""}
-  ---
-
-  ## About Me
-
-  - ${Data.input[3].value || ""}  ${Data.input[4].value || ""} ${
-    Data.input[5].value ? `[${Data.input[5].value}]` : ""
+      contentItems.push(
+        <>
+          <br />
+          <br />
+          <code key={i}>
+            - {title} [{linkTitle}]({linkURL})
+          </code>
+        </>
+      );
+    }
   }
 
-  - ${Data.input[6].value || ""}  ${Data.input[7].value || ""} ${
-    Data.input[8].value ? `[${Data.input[8].value}]` : ""
+  for (let i = 12; i <= 24; i += 2) {
+    if (Data.input[i].value) {
+      const title = Data.input[i].value;
+      const content = Data.input[i + 1].value;
+      contentItems2.push(
+        <>
+          <br />
+          <br />
+          <code key={i}>
+            - {title} {content}
+          </code>
+        </>
+      );
+    }
   }
-
-  - ${Data.input[9].value || ""}  ${Data.input[10].value || ""} ${
-    Data.input[11].value ? `[${Data.input[11].value}]` : ""
-  }
-
-  ${aboutMeMarkdown}
-
-  `;
-
-  const finalMarkdown =
-    markdown +
-    `
-  ${
-    categories &&
-    categories
-      .map(
-        (category) => `
-  ### ${category.category}
-
-  ${category.icons
-    .map((icon) => `- [![${icon.name}](${icon.iconImage})](${icon.iconImage})`)
-    .join("\n")}
-  `
+  const renderSkillsSocialLinks = (social) => {
+    return social.map((item) =>
+      item.title ? (
+        <code>
+          &lt;a href="{item.title + item.value}" target="blank"&gt;&lt;img
+          align="center" src={item.logo}
+          alt={item.value} height="30" width="40" /&gt; &lt;/a&gt;
+        </code>
+      ) : (
+        <>
+          <code>
+            &lt;a href="{item.name}" target="blank" rel="noreferrer"&gt;&lt;img
+            align="center" src= "{item.iconImage}" alt={item.name} width="40"
+            height="40" /&gt; &lt;/a&gt;
+          </code>
+        </>
       )
-      .join("\n")
-  }
+    );
+  };
 
-  ## Social
+  const mark = (
+    <code
+      style={{
+        fontSize: "1.4rem",
+        lineHeight: "1.5",
+        color: "#1B212C",
+        whiteSpace: "pre-line",
+        width: "100%",
+        overflow: "auto",
+        wordWrap: "break-word",
+      }}
+    >
+      <code>&lt;h1 align="center"&gt; {Data.input[0].value} &lt;/h1&gt;</code>
+      <br />
+      <code>&lt;h1 align="center"&gt;{Data.input[1].value}&lt;/h1&gt;</code>
+      <br />
+      <br />
+      <code>
+        &lt;p align="left"&gt; &lt;img src=
+        {`https://komarev.com/ghpvc/?username=${githubValue}&label=Profile%20views&color=0e75b6&style=flat`}
+        alt={githubValue}
+        /&gt; &lt;/p&gt;
+      </code>
+      {contentItems}
+      {contentItems2}
+      <br />
+      <br />
+      <code>&lt;h3 align="left"&gt; Connect with me: &lt;/h3&gt;</code>
+      <br />
+      <code>&lt;p align="left"&gt;&lt;/p&gt;</code>
+      <br />
+      {renderSkillsSocialLinks(Data.social)}
+      <br />
+      <br />
+      <code>&lt;h3 align="left"&gt; Languages and Tools: &lt;/h3&gt;</code>
+      <br />
+      <code>&lt;p align="left"&gt;&lt;/p&gt;</code>
+      <br />
+      {categories &&
+        categories.map((category) => renderSkillsSocialLinks(category.icons))}
+    </code>
+  );
 
-  ${renderSocialLinks(Data.social)
-    .map(
-      (socials) => `- [![${socials.title}](${socials.logo})](${socials.title})`
-    )
-    .join("\n")}
-  `;
+  const formateMeark = (details) => {
+    const markdownString = ReactDOMServer.renderToStaticMarkup(details);
+    const result = markdownString
+      .replace(/<code[^>]*>/g, "")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/<\/?code>/g, "")
+      .replace(/&quot;/g, '"')
+      .replace(/&#x27;/g, "'")
+      .replace(/<br\/?>/g, "\n");
+    return result;
+  };
 
   const handleCopyMarkdown = () => {
-    navigator.clipboard.writeText(finalMarkdown);
-    alert("Markdown copied to clipboard!");
+    const unescapedString = formateMeark(mark);
+    navigator.clipboard.writeText(unescapedString);
+    setCopyButtonState({
+      icon: "checkmark-outline",
+      title: "copied",
+    });
+    setButtonZoomed(true);
+
+    setTimeout(() => {
+      setButtonZoomed(false);
+    }, 300);
   };
 
   const handleDownloadMarkdown = () => {
-    const blob = new Blob([finalMarkdown], { type: "text/plain" });
+    const unescapedString = formateMeark(mark);
+    const blob = new Blob([unescapedString], { type: "text/plain" });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -166,33 +203,22 @@ function Action({ Data, handleGenerateReadme }) {
         <Button
           Icon={"arrow-back-outline"}
           Title={"back to edit"}
-          onPressed={handleGenerateReadme}
+          onClick={handleGenerateReadme}
         />
         <Button
-          Icon={"copy-outline"}
-          Title={"copy-markdown"}
-          onPressed={handleCopyMarkdown}
+          Icon={copyButtonState.icon}
+          Title={copyButtonState.title}
+          onClick={handleCopyMarkdown}
+          isGreen={copyButtonState.icon === "checkmark-outline"}
+          isZoomed={isButtonZoomed}
         />
         <Button
           Icon={"download-outline"}
           Title={"download markdown"}
-          onPressed={handleDownloadMarkdown}
+          onClick={handleDownloadMarkdown}
         />
       </FlexButton>
-      <BoxStyle>
-        <Markdown>{markdown}</Markdown>
-        {categories &&
-          categories.map((category) => (
-            <div key={category.category}>
-              <h2 style={{ marginBottom: "2rem" }}>{category.category}</h2>
-              <div style={{ display: "flex", flexWrap: "wrap" }}>
-                {renderIcons(category.icons)}
-              </div>
-            </div>
-          ))}
-        <h2 style={{ marginBottom: "2rem" }}>Social</h2>
-        <div style={{ display: "flex" }}>{renderSocialLinks(Data.social)}</div>
-      </BoxStyle>
+      <BoxStyle>{mark}</BoxStyle>
     </div>
   );
 }

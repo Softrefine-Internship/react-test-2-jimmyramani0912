@@ -112,105 +112,126 @@ const categoriesData = [
       {
         name: "C",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
         isChecked: false,
       },
       {
         name: "C++",
         iconImage:
-          "https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
         isChecked: false,
       },
       {
         name: "C#",
         iconImage:
-          "https://w7.pngwing.com/pngs/520/669/png-transparent-c-logo-c-programming-language-computer-icons-computer-programming-programming-miscellaneous-blue-trademark.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
         isChecked: false,
       },
       {
         name: "TypeScript",
         iconImage:
-          "https://cdn.iconscout.com/icon/free/png-256/free-typescript-1174965.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        isChecked: false,
+      },
+      {
+        name: "Javascript",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
         isChecked: false,
       },
       {
         name: "Java",
-        iconImage: "https://cdn-icons-png.flaticon.com/512/226/226777.png",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
         isChecked: false,
       },
       {
         name: "Go",
         iconImage:
-          "https://static-00.iconduck.com/assets.00/golang-icon-398x512-eygvdisi.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg",
         isChecked: false,
       },
       {
         name: "Ruby",
         iconImage:
-          "https://w7.pngwing.com/pngs/535/618/png-transparent-ruby-on-rails-computer-programming-programming-language-ruby-angle-rectangle-logo.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg",
         isChecked: false,
       },
       {
         name: "php",
         iconImage:
-          "https://w7.pngwing.com/pngs/751/3/png-transparent-logo-php-html-others-text-trademark-logo-thumbnail.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
         isChecked: false,
       },
       {
         name: "Perl",
-        iconImage:
-          "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Perl_language_logo.svg/1200px-Perl_language_logo.svg.png",
+        iconImage: "https://api.iconify.design/logos-perl.svg",
         isChecked: false,
       },
       {
         name: "Scala",
-        iconImage: "https://cdn-icons-png.flaticon.com/512/6132/6132220.png",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg",
         isChecked: false,
       },
       {
         name: "Python",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
         isChecked: false,
       },
       {
         name: "Swift",
-        iconImage: "https://cdn-icons-png.flaticon.com/512/5968/5968371.png",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
         isChecked: false,
       },
       {
         name: "ObjectiveC",
         iconImage:
-          "https://iconape.com/wp-content/png_logo_vector/objective-c-logo.png",
+          "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg",
         isChecked: false,
       },
       {
         name: "Clojure",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Clojure_logo.svg/2048px-Clojure_logo.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
         isChecked: false,
       },
       {
         name: "Rust",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1024px-Rust_programming_language_black_logo.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg",
         isChecked: false,
       },
       {
         name: "Haskell",
-        iconImage: "https://cdn-icons-png.flaticon.com/512/5968/5968259.png",
+        iconImage:
+          "https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg",
         isChecked: false,
       },
       {
         name: "CoffeeScript",
         iconImage:
-          "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_d8fae28714e182eef659ca988ef6ac51/coffeescript.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/coffeescript/coffeescript-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "Elixir",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2699/PNG/512/elixir_lang_logo_icon_169207.png",
+          "https://www.vectorlogo.zone/logos/elixir-lang/elixir-lang-icon.svg",
+        isChecked: false,
+      },
+      {
+        name: "Erlang",
+        iconImage:
+          "https://www.vectorlogo.zone/logos/erlang/erlang-official.svg",
+        isChecked: false,
+      },
+      {
+        name: "nim",
+        iconImage:
+          "https://www.vectorlogo.zone/logos/nim-lang/nim-lang-icon.svg",
         isChecked: false,
       },
     ],
@@ -221,19 +242,19 @@ const categoriesData = [
       {
         name: "Vue.js",
         iconImage:
-          "https://w7.pngwing.com/pngs/253/990/png-transparent-vuejs-vuejs-logo-company-logo-logo-programming-langugae-coding-language-3d-icon.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "ReactJS",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "svelte",
         iconImage:
-          "https://raw.githubusercontent.com/sveltejs/svelte/29052aba7d0b78316d3a52aef1d7ddd54fe6ca84/site/static/images/svelte-android-chrome-512.png",
+          "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg",
         isChecked: false,
       },
       {
@@ -245,13 +266,13 @@ const categoriesData = [
       {
         name: "angularjs",
         iconImage:
-          "https://cdn4.iconfinder.com/data/icons/logos-3/543/AngularJS-512.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "backbonejs",
         iconImage:
-          "https://w7.pngwing.com/pngs/810/156/png-transparent-backbone-js-javascript-programmer-react-technology-angle-electronics-text-thumbnail.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/backbonejs/backbonejs-original-wordmark.svg",
         isChecked: false,
       },
       {
@@ -262,65 +283,95 @@ const categoriesData = [
       },
       {
         name: "vuetify",
-        iconImage:
-          "https://static-00.iconduck.com/assets.00/vuetify-icon-223x256-3xz0ru5e.png",
+        iconImage: "https://bestofjs.org/logos/vuetify.svg",
         isChecked: false,
       },
       {
         name: "html",
         iconImage:
-          "https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "css",
-        iconImage: "https://cdn-icons-png.flaticon.com/512/5968/5968242.png",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "pug",
-        iconImage:
-          "https://johnsoncodehk.gallerycdn.vsassets.io/extensions/johnsoncodehk/vscode-pug/1.1.2/1688767501654/Microsoft.VisualStudio.Services.Icons.Default",
+        iconImage: "https://cdn.worldvectorlogo.com/logos/pug.svg",
         isChecked: false,
       },
       {
         name: "gulp",
         iconImage:
-          "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/gulp-js-icon.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/gulp/gulp-plain.svg",
         isChecked: false,
       },
       {
         name: "sass",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
         isChecked: false,
       },
       {
         name: "redux",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2415/PNG/512/redux_original_logo_icon_146365.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
         isChecked: false,
       },
       {
         name: "babel",
-        iconImage:
-          "https://raw.githubusercontent.com/babel/logo/master/babel.png",
+        iconImage: "https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg",
         isChecked: false,
       },
       {
         name: "tailwind",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130128.png",
+          "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
         isChecked: false,
       },
       {
         name: "materialise",
-        iconImage: "https://colinstodd.com/images/posts/matcss-min.png",
+        iconImage:
+          "https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/materialize.svg",
         isChecked: false,
       },
       {
         name: "ember",
-        iconImage: "https://emberjs.com/images/brand/ember-4c.svg",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg",
+        isChecked: false,
+      },
+      {
+        name: "webpack",
+        iconImage:
+          "https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg",
+        isChecked: false,
+      },
+      {
+        name: "Bulma",
+        iconImage:
+          "https://raw.githubusercontent.com/gilbarbara/logos/804dc257b59e144eaca5bc6ffd16949752c6f789/logos/bulma.svg",
+        isChecked: false,
+      },
+      {
+        name: "gtk",
+        iconImage:
+          "https://upload.wikimedia.org/wikipedia/commons/7/71/GTK_logo.svg",
+        isChecked: false,
+      },
+      {
+        name: "qt",
+        iconImage:
+          "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg",
+        isChecked: false,
+      },
+      {
+        name: "wx_widget",
+        iconImage:
+          "https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg",
         isChecked: false,
       },
     ],
@@ -331,60 +382,60 @@ const categoriesData = [
       {
         name: "nodejs",
         iconImage:
-          "https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "spring",
         iconImage:
-          "https://e7.pngegg.com/pngimages/931/804/png-clipart-spring-framework-software-framework-java-application-framework-web-framework-java-leaf-text-thumbnail.png",
+          "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
         isChecked: false,
       },
       {
         name: "express",
         iconImage:
-          "https://cdn.iconscout.com/icon/free/png-256/free-express-2-282577.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "kafka",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Apache_kafka-icon.svg/2048px-Apache_kafka-icon.svg.png",
+          "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg",
         isChecked: false,
       },
       {
         name: "solr",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2699/PNG/512/apache_solr_logo_icon_168611.png",
+          "https://www.vectorlogo.zone/logos/apache_solr/apache_solr-icon.svg",
         isChecked: false,
       },
       {
         name: "rabbitMQ",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2699/PNG/512/rabbitmq_logo_icon_170810.png",
+          "https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg",
         isChecked: false,
       },
       {
         name: "hadoop",
         iconImage:
-          "https://w7.pngwing.com/pngs/260/648/png-transparent-apache-hadoop-logo-big-data-data-analysis-hadoop-distributed-filesystem-hue-hadoop-text-logo-smiley.png",
+          "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg",
         isChecked: false,
       },
       {
         name: "nginx",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2415/PNG/512/nginx_original_logo_icon_146413.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg",
         isChecked: false,
       },
       {
         name: "openresty",
-        iconImage: "https://avatars.githubusercontent.com/u/7390180?s=280&v=4",
+        iconImage: "https://openresty.org/images/logo.png",
         isChecked: false,
       },
       {
         name: "nestjs",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NestJS.svg/1200px-NestJS.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg",
         isChecked: false,
       },
     ],
@@ -395,49 +446,48 @@ const categoriesData = [
       {
         name: "android",
         iconImage:
-          "https://cdn0.iconfinder.com/data/icons/designer-skills/128/android-2-512.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
         isChecked: false,
       },
       {
         name: "flutter",
         iconImage:
-          "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png",
+          "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
         isChecked: false,
       },
       {
         name: "dart",
         iconImage:
-          "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/dart-programming-language-icon.png",
+          "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
         isChecked: false,
       },
       {
         name: "kotlin",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+          "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
         isChecked: false,
       },
       {
         name: "nativescript",
         iconImage:
-          "https://upload.wikimedia.org/wikipedia/commons/4/4f/NativeScript_logo.png",
+          "https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/nativescript.svg",
         isChecked: false,
       },
       {
         name: "xamarin",
         iconImage:
-          "https://w7.pngwing.com/pngs/304/124/png-transparent-xamarin-android-cross-platform-native-studio-blue-angle-studio.png",
+          "https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/xamarin.svg",
         isChecked: false,
       },
       {
         name: "reactnative",
-        iconImage:
-          "data:image/png;base64,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",
+        iconImage: "https://reactnative.dev/img/header_logo.svg",
         isChecked: false,
       },
       {
         name: "ionic",
         iconImage:
-          "https://www.pinpng.com/pngs/m/310-3104493_create-adaptive-icons-for-ionic-cordova-applications-ionic.png",
+          "https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg",
         isChecked: false,
       },
       {
@@ -1016,10 +1066,9 @@ function Form({ onSubmit }) {
       icons: selectedData,
       social: socialData,
     };
-    console.log(
-      JSON.stringify(finalData) + "]]]]]]]]]]]]]]]]]]]]]]]]]]]]]55566"
-    );
-    onSubmit(finalData);
+    if (finalData.social.length !== 0) {
+      onSubmit(finalData);
+    }
   };
 
   const handleInputChange = (title, value) => {

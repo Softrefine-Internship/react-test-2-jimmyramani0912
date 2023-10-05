@@ -1,5 +1,5 @@
 import React from "react";
-import Styled from "styled-components";
+import Styled, { css } from "styled-components";
 
 const ButtonSec = Styled.div`
 background-color:#F6FAFD ;
@@ -15,6 +15,21 @@ font-size:1.2rem;
 &:hover{
     background-color:#f3f3f3;
 }
+
+${(props) =>
+  props.isGreen &&
+  css`
+    color: green;
+    border-color: green;
+  `}
+
+  transition: transform 0.3s ease;
+
+${(props) =>
+  props.isZoomed &&
+  css`
+    transform: scale(0.5);
+  `}
 
 @media screen and (max-width: 1200px) {
   width: 25rem;
@@ -45,10 +60,10 @@ const TitleCompo = Styled.h2`
 `;
 
 function Button(props) {
-  const { Icon, Title, onPressed } = props;
+  const { Icon, Title, onClick, isGreen, isZoomed } = props;
 
   return (
-    <ButtonSec onClick={onPressed}>
+    <ButtonSec onClick={onClick} isGreen={isGreen} isZoomed={isZoomed}>
       <IconSec>
         <ion-icon name={Icon}></ion-icon>
       </IconSec>
