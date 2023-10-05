@@ -5,8 +5,8 @@ import Markdown from "react-markdown";
 
 const FlexButton = Styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 3rem 5rem;
+  justify-content: space-between;
+  margin: 3rem 8.5vw;
 `;
 
 const BoxStyle = Styled.div`
